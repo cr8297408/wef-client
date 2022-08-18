@@ -1,0 +1,9 @@
+.bg {
+	background-image: url(../img/money.jpg);
+	background-position: center;
+}
+
+body {
+	background: rgb(17,8,170);
+	background: linear-gradient(90deg, rgba(17,8,170,0.9458158263305322) 0%, rgba(11,38,89,0.6320903361344538) 35%, rgba(0,212,255,1) 100%);
+}
