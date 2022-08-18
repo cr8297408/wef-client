@@ -16,6 +16,9 @@
 			</div>
 			<div class="col bg-white p-5 rounded-end">
 				<h2 class="fw-bold text-center py-4">Register to wef-api</h2>
+				<div id="error" class="alert alert-danger ocultar" role="alert">
+					Las Contraseñas no coinciden, vuelve a intentar !
+				</div>
 				<form class="fw-bold text-center py-5" action="#" id="form">
 						<ul>
 								<div class="mb-4">
@@ -32,19 +35,27 @@
 								</div>
 								<div class="mb-4">
 									<label for="phone" class="form-label">Phone</label>
-									<input type="text" id="phone" class="form-control" required placeholder="ingresa tu nombre">
+									<input type="text" id="phone" class="form-control" required placeholder="ingresa tu telefono">
 								</div>
 								<div class="mb-4">
 										<label for="password" class="form-label">Password</label>
 										<input type="password" id="password" class="form-control" placeholder="ingresa tu contraseña" required maxlength="16">
 								</div>
+								<div class="mb-4">
+										<label for="repeatPassword" class="form-label">Repeat Password</label>
+										<input type="password" id="repeatPassword" class="form-control" placeholder="ingresa de nuevo tu contraseña" required maxlength="16">
+								</div>
 								<div class="d-grid">
-										<button id="boton" type="submit" class="btn btn-primary">Login</button>
+										<button id="boton" type="submit" class="btn btn-primary">Register</button>
+								</div>
+								<div class="my-3">
+									<span>Ya tienes cuenta? <a href="./login.html">Ingresa</a></span>
 								</div>
 						</ul>
 				</form>
 			</div>
 		</div>
 	</div>
+	<script src="../js/register.js"></script>
 </body>
 </html>

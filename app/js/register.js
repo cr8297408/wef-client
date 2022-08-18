@@ -6,10 +6,25 @@ let form = document.getElementById('form')
 		let user = document.getElementById('user').value;
 		let phone = document.getElementById('phone').value;
 		let password = document.getElementById('password').value;
+		let repeatPassword = document.getElementById('repeatPassword').value;
+
+		if(password !== repeatPassword){
+			document.getElementById("error").classList.add("mostrar");
+			setTimeout(function () {
+				document.getElementById("error").classList.remove("mostrar")
+			}, 3500)
+    	return false;
+		}
 
 		const options = {
 			method: 'POST',
-			body: `{"email": "${email}" ,"password":"${password}"}`,
+			body: `{
+				"email": "${email}",
+				"password":"${password}",
+				"user": "${user}",
+				"phone": "${phone}",
+				"name": "${name}"
+}`,
 			headers:{
 				'Content-Type': 'application/json'
 			}
