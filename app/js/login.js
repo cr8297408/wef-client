@@ -1,3 +1,5 @@
+let urlBack = 'http://localhost:3000/api/v1';
+
 let form = document.getElementById('form')
 	form.addEventListener('submit', e => {
 		e.preventDefault()
@@ -14,8 +16,24 @@ let form = document.getElementById('form')
 
 		console.log(options.body)
 		
-		fetch('http://localhost:3001/api/v1/auth/signIn', options)
+		fetch(`${urlBack}/auth/signIn`, options)
 			.then(response => response.json())
-			.then(response => console.log(response))
+			.then(data => redirectValidate(data))
 			.catch(err => console.error(err));
-	})
+
+		})
+
+function redirectValidate(response) {
+	console.log(response);
+	if (response.data) {
+		window.location.href = "http://127.0.0.1:5500/app/views/users.html";
+	}
+	else {
+		let divError = document.getElementById("error");
+		divError.innerHTML = response.message;
+		divError.classList.add("mostrar");
+			setTimeout(function () {
+				document.getElementById("error").classList.remove("mostrar")
+		}, 6500)
+	}
+}
