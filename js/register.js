@@ -43,7 +43,7 @@ let form = document.getElementById('form')
 
 function verifyRegister(response) {
 	if (response.status !== 400) {
-		window.location.href = "http://127.0.0.1:5500/app/views/users.html";
+		window.location.href = "http://127.0.0.1:5500/views/users.html";
 	}
 	else {
 		let divError = document.getElementById("error");
