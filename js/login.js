@@ -1,4 +1,4 @@
-let urlBack = 'http://localhost:3000/api/v1';
+let urlBack = 'https://wefapisena.herokuapp.com/api/v1';
 
 let form = document.getElementById('form')
 	form.addEventListener('submit', e => {
